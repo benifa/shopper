@@ -2,7 +2,6 @@ from flask_restful import reqparse
 
 from theCode.db import db
 
-
 class StoreModel(db.Model):
     __tablename__ = 'stores'
     id = db.Column(db.Integer, primary_key=True)
