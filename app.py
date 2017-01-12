@@ -11,7 +11,7 @@ from resources.userRegister import UserRegister
 from security import authenticate, identify
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///data.db'
+app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URL', 'sqlite:///data.db')
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.secret_key = "beni"
 api = Api(app)
@@ -25,4 +25,6 @@ api.add_resource(Store, '/store/<string:name>')
 api.add_resource(StoreList, '/stores')
 
 if __name__ == '__main__':
+    from theCode.db import db
+    db.init_app(app)
     app.run(port=5001, debug=True)
