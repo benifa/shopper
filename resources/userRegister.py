@@ -1,7 +1,7 @@
 from flask_restful import Resource
 from flask_restful import reqparse
 
-from theCode.models.usermodel import UserModel
+from models.usermodel import UserModel
 
 
 class UserRegister(Resource):

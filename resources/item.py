@@ -1,7 +1,7 @@
 from flask_jwt import jwt_required
 from flask_restful import Resource
 
-from theCode.models.itemModel import ItemModel
+from models.itemModel import ItemModel
 
 
 class Item(Resource):

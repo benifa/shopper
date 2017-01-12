@@ -1,6 +1,6 @@
 from flask_restful import Resource
 
-from theCode.models.itemModel import ItemModel
+from models.itemModel import ItemModel
 
 
 class ItemList(Resource):

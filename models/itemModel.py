@@ -1,6 +1,6 @@
 from flask_restful import reqparse
 
-from theCode.db import db
+from db import db
 
 class ItemModel(db.Model):
     __tablename__ = 'items'
